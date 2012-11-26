@@ -1,18 +1,50 @@
-# README for a newly created project.
+**Blog post 1:** [Breaking down app.js file - nodejs, express, mongoose](http://madhums.me/2012/07/19/breaking-down-app-js-file-nodejs-express-mongoose/)
 
-There are a couple of things you should do first, before you can use all of Git's power:
+**Blog post 2:** Coming soon!
 
-  * Add a remote to this project: in the Cloud9 IDE command line, you can execute the following commands
-    `git remote add [remote name] [remote url (eg. 'git@github.com:/ajaxorg/node_chat')]` [Enter]
-  * Create new files inside your project
-  * Add them to to Git by executing the following command
-    `git add [file1, file2, file3, ...]` [Enter]
-  * Create a commit which can be pushed to the remote you just added
-    `git commit -m 'added new files'` [Enter]
-  * Push the commit the remote
-    `git push [remote name] master` [Enter]
+This is a boilerplate node.js application illustrating various features used in everyday
+web development, with a fine touch of best practices. The demo app is a blog application
+where users (signing up using facebook, twitter, github and simple registrations) can create
+an article, delete an article and add comment on the article.
 
-That's it! If this doesn't work for you, please visit the excellent resources from [Github.com](http://help.github.com) and the [Pro Git](http://http://progit.org/book/) book.
-If you can't find your answers there, feel free to ask us via Twitter (@cloud9ide), [mailing list](groups.google.com/group/cloud9-ide) or IRC (#cloud9ide on freenode).
+**Note:** You need to have node.js and mongodb installed and running
 
-Happy coding!
+## Install
+```sh
+  $ git clone git://github.com/madhums/nodejs-express-mongoose-demo.git
+  $ npm install
+  $ cp config/config.example.js config/config.js
+  $ npm start
+```
+
+**NOTE:** Do not forget to update your facebook twitter and github APP_ID and APP_SECRET in `config/config.js`
+
+Then visit [http://localhost:3000/](http://localhost:3000/)
+
+## Directory structure
+```
+-app/
+  |__controllers/
+  |__models/
+  |__views/
+-config/
+  |__routes.js
+  |__config.js
+  |__passport.js (auth config)
+```
+
+If you are looking for a specific feature, please use the issue tracker. I will try to come
+up with a demo as earliest as I can. Please feel free to fork and send updates :)
+
+---
+
+## License
+(The MIT License)
+
+Copyright (c) 2012 Madhusudhan Srinivasa < [madhums8@gmail.com](mailto:madhums8@gmail.com) >
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
